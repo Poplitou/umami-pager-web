@@ -1,0 +1,15 @@
+<!--
+    View for ready-to-cast / home screen
+-->
+<section class="home">
+
+    <div class="sidebar">
+        <img src="/img/logo-512px.png" width="192" height="192"/>
+        <h1>Watch for your ticket number</h1>
+    </div>
+
+    <div class="content">
+        <order ng-repeat="order in model.orders" data="order" ng-class="{'complete': order.done == order.locations.length}"></order>
+        </div>
+    </div>
+</section>

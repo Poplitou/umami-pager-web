@@ -1,0 +1,6 @@
+<div>
+        <div class="left"><h1>{{data.name}}</h1></div>
+        <div class="right">
+            <img ng-repeat="location in data.locations | orderObjectBy:'name':true" ng-src="img/{{location.name}}{{location.done && '-complete' || ''}}{{data.done == data.locations.length && '-final' || ''}}.png" width="90" height="90" />
+        </div>
+</div>

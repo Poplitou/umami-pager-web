@@ -1,0 +1,136 @@
+@font-face { font-family: Roboto; src: url('/fonts/Roboto-Light.ttf'); }
+@font-face { font-family: RobotoLight; src: url('/fonts/Roboto-Thin.ttf'); }
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 21px;
+    color: #FF9800;
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    width:336px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 32px;
+    margin-right: 32px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    margin: 32px 32px 32px 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.splash {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    background-color: #ff6600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+}
+
+order {
+    color: #FFF;
+    margin: 16px 16px 0 0;
+    padding: 32px;
+    background-color: #FF9800;
+    text-align:center;
+    height:90px;
+    flex-grow: 1;
+    flex-basis: initial;
+}
+
+order.ng-enter,
+order.ng-leave {
+  transition:0.1s linear all;
+}
+
+order.ng-enter,
+order.ng-leave.ng-leave-active {
+  flex-grow: 0.00001;
+  flex-basis: 10px;
+}
+
+order.ng-enter img,
+order.ng-leave.ng-leave-active img{
+  opacity:0;
+  width: 0;
+}
+
+order.ng-enter h1,
+order.ng-leave.ng-leave-active h1{
+  opacity:0;
+  width: 0;
+}
+
+order.ng-leave,
+order.ng-enter.ng-enter-active {
+  flex-grow: 1;
+  flex-basis: initial;
+}
+
+order.ng-leave img,
+order.ng-enter.ng-enter-active img{
+  opacity:1;
+  width: auto;
+}
+
+order.ng-leave h1,
+order.ng-enter.ng-enter-active h1{
+  opacity:1;
+  width: auto;
+}
+
+.complete {
+    background-color: #4CAF50;
+}
+
+order h1 {
+    font-size: 90px;
+    margin:auto;
+    line-height:90px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+order img {
+    margin-right: 16px;
+}
+
+.left {
+    display: inline-block;
+    float: left;
+}
+
+.right {
+    float: right;
+}

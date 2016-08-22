@@ -1,0 +1,72 @@
+<!--
+   index.html
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Umami Shop Order Pager</title>
+
+        <meta name="author" content="Quentin Golsteyn">
+        <meta name="robots" content="none">
+        <meta name="googlebot" content="none">
+
+        <link rel="stylesheet" href="css/app.css">
+
+        <script src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
+        <script src="//www.gstatic.com/cast/sdk/libs/mediaplayer/1.0.0/media_player.js"></script>
+
+        <!-- Lib -->
+        <script src="scripts/lib/angular.min.js"></script>
+        <script src="scripts/lib/angular-ui-router.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+
+        <!-- App -->
+        <script src="scripts/app.js"></script>
+
+        <!-- Constants -->
+        <script src="scripts/constants/appConstant.js"></script>
+
+        <!-- Directive -->
+        <script src="scripts/directives/orderItem.js"></script>
+
+        <!-- Factories -->
+        <script src="scripts/services/cast/castReceiverManagerService.js"></script>
+        <script src="scripts/services/cast/messageBusService.js"></script>
+
+        <!-- Controllers -->
+        <script src="scripts/controllers/appController.js"></script>
+        <script src="scripts/controllers/splashController.js"></script>
+        <script src="scripts/controllers/homeController.js"></script>
+        <script src="scripts/controllers/welcomeController.js"></script>
+
+        <!-- Firebase -->
+        <script>
+            // Initialize the Firebase SDK
+            var config = {
+                apiKey: "AIzaSyCy3vZqKiTrw9hS3NH6KOUyDlG_abEty-4",
+                authDomain: "umami-shop.firebaseapp.com",
+                databaseURL: "https://umami-shop.firebaseio.com",
+                storageBucket: "umami-shop.appspot.com"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+    </head>
+
+    <body ng-app="helloApp" ng-controller="appController">
+
+        <div ng-show="model.displayDebugInfo">
+
+            <!--add debug info here-->
+
+            version: {{ ::model.version}}
+
+        </div>
+
+        <main ui-view></main>
+
+    </body>
+</html>
